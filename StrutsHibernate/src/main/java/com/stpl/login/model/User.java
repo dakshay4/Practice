@@ -1,13 +1,13 @@
 package com.stpl.login.model;
 
-public class Login {
-	private Integer id;
+public class User {
+	private String id;
 	private String pwd;
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getPwd() {

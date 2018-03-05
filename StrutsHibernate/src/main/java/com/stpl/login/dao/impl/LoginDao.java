@@ -1,4 +1,4 @@
-package com.stpl.login.dao;
+package com.stpl.login.dao.impl;
 
 import java.net.URL;
 import java.util.List;
@@ -14,11 +14,12 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import com.stpl.login.model.Login;
+import com.stpl.login.dao.LoginDaoInterface;
+import com.stpl.login.model.User;
 import com.stpl.listener.HibernateListener;
 
 
-public class LoginDao implements LoginDaoInterface<Login,Integer,String>{
+public class LoginDao implements LoginDaoInterface<User,String,String>{
 	private Session currentSession;
 	private Transaction currentTransaction;
 	
@@ -76,9 +77,9 @@ public class LoginDao implements LoginDaoInterface<Login,Integer,String>{
 	
 //--------------------Functions ----------------------
 	
-	public List<Login> findById(Integer Id, String Pass){
+	public List<User> findById(String Id, String Pass){
 		@SuppressWarnings("unchecked")
-		List<Login> login= getCurrentSession().createQuery("from Login l where l.id:=lid and l.pwd:=pwd").
+		List<User> login= getCurrentSession().createQuery("from Login l where l.id:=lid and l.pwd:=pwd").
 				setParameter("lid", Id).setParameter("pwd", Pass).list();
 		return login;
 	}

@@ -12,7 +12,7 @@
 	<action name="home">
 		<result>/index.jsp</result>
 	</action>
-	<action name="login" class="com.stpl.login.LoginAction">
+	<action name="login" class="com.stpl.login.LoginAction" method="findCustomer">
 		<result name="success">/welcome_user.jsp</result>
 		<result name="error">/error.jsp</result>
 	</action>
