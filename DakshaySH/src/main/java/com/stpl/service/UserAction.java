@@ -22,12 +22,11 @@ public class UserAction implements Action, ModelDriven<User>, ServletContextAwar
 	public String execute() throws Exception{
 		SessionFactory sf = (SessionFactory) ctx.getAttribute("SessionFactory");
 		UserDao userDao = new UserDaoImpl(sf);
+		System.out.println("sdfjk"+user.getId() + "dsfsdf"+user.getPwd());
 		List<User> us = userDao.findById(user.getId(), user.getPwd());
 		if(us.size()==0) return ERROR;
 		else return SUCCESS;
 	}
-	
-	
 	
 	
 	private User user = new User();

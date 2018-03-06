@@ -16,7 +16,6 @@ public class HibernateServletContextListener implements ServletContextListener{
 		SessionFactory sf = (SessionFactory) sce.getServletContext().getAttribute("SessionFactory");
 		sf.close();
 	}
-	
 	public void contextInitialized(ServletContextEvent sce) {
 		URL url = HibernateServletContextListener.class.getResource("/hibernate.cfg.xml");
 		Configuration config = new Configuration().configure(url);

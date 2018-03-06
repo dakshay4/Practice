@@ -1,1 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.stpl.model.User" entity-name="User" table="USER">
+		<id column="USER_ID" name="id" type="java.lang.String">
+		<generator class="increment"/>
+		</id> 
+		<property column="NAME" name="name" type="java.lang.String" />
+		<property column="PASSWORD" name="pwd" type="java.lang.String" />
+		<property column="EMAIL" name="email" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

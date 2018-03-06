@@ -32,10 +32,13 @@ public class UserDaoImpl implements UserDao {
 	}
 	
 	public List<User> findById(String Id, String Pwd){
+		System.out.println(openSession());
 		@SuppressWarnings("unchecked")
-		List<User> user = session.createQuery("from User where id:=id and pwd:=pwd")
+		List<User> user = openSession().createQuery("from User s where s.id=:id and s.pwd=:pwd")
 				.setParameter("id", Id).setParameter("pwd", Pwd).list();
-						
+		for(User l: user) {
+			System.out.println("sdf"+l.getEmail()+l.getId());
+		}
 		return user;
 	}
 }
