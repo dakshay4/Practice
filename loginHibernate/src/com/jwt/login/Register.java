@@ -30,7 +30,7 @@ public class Register extends HttpServlet{
         isCorrectEmail ic =new isCorrectEmail();
         out.println(userid+"||"+email+"||" +pass+ "||"+mobilee);        
         
-   try {
+   try {	
        // 	out.println("Hi. .."+userid);
         if(!(mobilee.length()==10 && ic.validate(email))) throw new ArithmeticException ("Invalid Mobile Number or EmailId, go back and try again");
         

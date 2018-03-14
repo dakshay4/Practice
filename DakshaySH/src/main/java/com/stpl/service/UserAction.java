@@ -18,17 +18,22 @@ public class UserAction implements Action, ModelDriven<User>, ServletContextAwar
 		this.ctx=ctx;
 	}
 	
-	
 	public String execute() throws Exception{
 		SessionFactory sf = (SessionFactory) ctx.getAttribute("SessionFactory");
 		UserDao userDao = new UserDaoImpl(sf);
-		System.out.println("sdfjk"+user.getId() + "dsfsdf"+user.getPwd());
+		//System.out.println("sdfjk"+user.getId() + "dsfsdf"+user.getPwd());
 		List<User> us = userDao.findById(user.getId(), user.getPwd());
 		if(us.size()==0) return ERROR;
 		else return SUCCESS;
 	}
 	
-	
+	public String userRegistration() throws Exception{
+		SessionFactory sf = (SessionFactory) ctx.getAttribute("SessionFactory");
+		UserDao userDao = new UserDaoImpl(sf);
+		System.out.println("ID="+user.getId() + "NAME="+user.getName() + "PWD="+user.getPwd()+ "email="+user.getEmail());
+		String str = userDao.persist(user);
+		return str;
+	}
 	private User user = new User();
 	
 	public User getModel() {

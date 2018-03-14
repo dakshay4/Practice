@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.stpl.Hotels.Hotel" table="roomavailability">
+		<id column="sno" name="sno" type="java.lang.Integer">
+		<generator class="increment"/>
+		</id>
+		<property column="c_in" name="c_in" type="java.sql.Date" />
+		<property column="c_out" name="c_out" type="java.sql.Date" />
+		<property column="standard" name="pax" type="java.lang.Integer" />
+		<property column="deluxe" name="rooms" type="java.lang.Integer" />
+		<property column="super_deluxe" name="extra_adult" type="java.lang.Integer" />
+		<property column="suite" name="guest" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

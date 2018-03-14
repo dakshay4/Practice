@@ -9,11 +9,12 @@ import org.hibernate.Transaction;
 import com.stpl.dao.UserDao;
 import com.stpl.model.User;
 
-public class UserDaoImpl implements UserDao {
+public class UserDaoImpl implements UserDao<User, String, String> {
 	
+	private static final String SUCCESS = "Success";
 	private SessionFactory sf;
-	private Session session;
-	private Transaction transaction;
+	private Session currentSession;
+	private Transaction currentTransaction;
 	public UserDaoImpl(SessionFactory sf) {
 		this.sf = sf;
 	}
@@ -21,24 +22,75 @@ public class UserDaoImpl implements UserDao {
 	public SessionFactory getSessionFactory() {
 		return sf;
 	}
-	public Session openSession() {
-		session=getSessionFactory().openSession();
-		return session;
+	public Session openCurrentSession() {
+		currentSession = getSessionFactory().openSession();
+		return currentSession;
 	}
 	
-	public Transaction openSessionWithTransaction() {
-		transaction=getSessionFactory().openSession().beginTransaction();
-		return transaction;
+	public void closeCurrentSession() {
+		currentSession.close();
 	}
 	
+	public void closeCurrentSessionWithTransaction() {
+		currentTransaction.commit();
+		currentSession.close();
+	}
+	
+	public Transaction openCurrentSessionWithTransaction() {
+		currentSession=getSessionFactory().openSession();
+		currentTransaction=currentSession.beginTransaction();
+		return currentTransaction;
+	}
+	
+	public Session getCurrentSession() {
+		return this.currentSession;
+	}
+
+	public void setCurrentSession(Session currentSession) {
+		this.currentSession = currentSession;
+	}
+
+	public Transaction getCurrentTransaction() {
+		return currentTransaction;
+	}
+
+	public void setCurrentTransaction(Transaction currentTransaction) {
+		this.currentTransaction = currentTransaction;
+	}
+	
+
 	public List<User> findById(String Id, String Pwd){
-		System.out.println(openSession());
+		System.out.println(getSessionFactory().openSession());
 		@SuppressWarnings("unchecked")
-		List<User> user = openSession().createQuery("from User s where s.id=:id and s.pwd=:pwd")
+		List<User> user = getSessionFactory().openSession().createQuery("from User s where s.id=:id and s.pwd=:pwd")
 				.setParameter("id", Id).setParameter("pwd", Pwd).list();
-		for(User l: user) {
+/*		for(User l: user) {
 			System.out.println("sdf"+l.getEmail()+l.getId());
 		}
-		return user;
+*/		return user;
+	}
+	
+	public String persist(User entity) {
+		Transaction tx=null;
+		try {
+			/*Session session=getSessionFactory().openSession();
+			tx=session.beginTransaction();
+			session.persist(entity);
+			tx.commit();*/
+			openCurrentSessionWithTransaction();
+			getCurrentSession().persist(entity);
+			closeCurrentSessionWithTransaction();
+			
+		}catch (Exception e) {
+			if(openCurrentSessionWithTransaction()!=null)
+				openCurrentSessionWithTransaction().rollback();
+		e.printStackTrace();
+		}finally {
+			
+		}
+
+		
+		
+		return "success";
 	}
 }

@@ -15,5 +15,7 @@ Welcome !
 	<s:textfield name="pwd" label="Password" type="password"></s:textfield>
 	<s:submit value="Login"></s:submit> 
 </s:form>
+
+<a href =register.jsp> New User! Sign Up here</a>
 </body>
 </html>

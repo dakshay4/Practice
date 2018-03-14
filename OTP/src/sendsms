@@ -1,0 +1,15 @@
+<!-- Send SMS using XML -->
+
+<MESSAGE>     
+	<AUTHKEY>Authentication Key </AUTHKEY>     
+	<SENDER>SenderID</SENDER>     
+	<ROUTE>Template</ROUTE>     
+	<CAMPAIGN>XML API</CAMPAIGN>     
+	<SMS TEXT="message1" >         
+		<ADDRESS TO="number1"></ADDRESS>         
+		<ADDRESS TO="number2"></ADDRESS>     
+	</SMS>     
+	<SMS TEXT="hi test message" >         
+		<ADDRESS TO="number3"></ADDRESS>
+	</SMS>
+</MESSAGE>
