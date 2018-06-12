@@ -1,6 +1,6 @@
-<html>
+<!-- <html>
     <head>
-        <title>SkilRock Technologies</title>
+        <title>Dakshay Agarwal</title>
         <style type="text/css">
 body{
 	background-color: lightblue;
@@ -9,8 +9,631 @@ body{
 </style>
     </head>
     <body>
-	<h2><font color=darkpink>Hi! Welcome to Skilrock</font></h2>
+	<h2><font color=darkpink>Hi! Welcome</font></h2>
    		<a href="login.html">Login</a>
         <a href="user.jsp">Register</a>
     </body>
+</html>
+
+
+
+ -->
+
+
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Tourism Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color:yellowgreen;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color:yellowgreen;
+  }
+  .logo-small {
+      color: #303030;
+      font-size: 50px;
+  }
+  .logo {
+      color: #303030;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #aaa;
+  }
+  .carousel-indicators li {
+      border-color:#303030;
+  }
+  .carousel-indicators li.active {
+      background-color: #303030;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid yellowgreen; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #303030;
+      background-color: #fff !important;
+      color:#f6f6f6;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: yellowgreen !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: yellowgreen;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: darkgreen;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f6f6f6 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f6f6f6;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Lets Travel</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">LOGIN</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#help">HELP</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Lets Travel</h1> 
+  <p>The fool wanders, a wise man travels!!</br>-Thomas Fuller</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+          <button type="button" class="btn btn-danger"><a href="#">Subscribe</a></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Lets Travel</h2><br>
+      <h4>Lets Travel is an initiative taken by the team of two final-year Computer Science students named Afrin Athar and Dakshay Agarwal for the betterment of tourist development in our country and  to increase the tourists activity planning in India through their work.Among 28 states, we are covering 
+      states like northern states and southern states.They are focusing on the reasons of declining tourists and to increase the tourism from foreign countries</h4><br>
+      <p>The concept of our system to increase the Tourism Activity Planning and Recommendation among tourists travelling in India including  both inbound and outbound tourists.The Customer will select the states as per their choice and then they will be going to select the package among 3 stra, 4 star and 5 star.
+      </p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION: To analyze the status,potential and growth of Tourism in India and increase the tourism in tourist places of India and its adjoining areas.</strong></h4><br></p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Bookings</h4>
+      <p>Booking of packages for customers </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Tourist Packages for newly married Couples.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Security</h4>
+      <p>Securing your packages</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon  glyphicon-globe logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Area coverage.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-phone logo-small"></span>
+      <h4>In case of Advice needed ,our counsellors are ready for guidance for customers. </h4>
+      <p></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-envelope logo-small"></span>
+      <h4 style="color:#303030;">Messages</h4>
+      <p>You can email us at given email id provided below.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Login your account</h2><br>
+  <form class="form-horizontal" name="LogInForm" id="FormId" action="login" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-8">
+        <input type="text"  class="form-control" id="email" placeholder="Enter email" name="emailOrUser">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-8">          
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-8">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-8">
+          <input type="submit" name="submit_id" class="btn btn-default" value="Login">
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a Package plan to experience with us.</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Three Star</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Manali</strong> </p>
+          <p><strong>Shimla</strong> </p>
+          <p><strong>Kullu</strong> </p>
+          <p><strong>Leh</strong></p>
+          <p><strong>Manali Leh Road Trip</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>15k</h3>
+          <h4>8 day stay</h4>
+          <button class="btn btn-lg">Buy</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Four Star</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Chennai</strong> </p>
+          <p><strong>Kodaikanal</strong> </p>
+          <p><strong>Pondicherry</strong> </p>
+          <p><strong>kerala</strong> </p>
+          <p><strong>Adjoining areas</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>20k</h3>
+          <h4>10 days stay</h4>
+          <button class="btn btn-lg">Buy</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Five Star</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Gangtok</strong></p>
+          <p><strong>Naathula Hills</strong></p>
+          <p><strong>Darjeeling</strong></p>
+          <p><strong>Guwahati</strong></p>
+          <p><strong>Adjoining Areas</strong> </p>
+        </div>
+        <div class="panel-footer">
+          <h3>25k</h3>
+          <h4>10 day stay</h4>
+          <button class="btn btn-lg">Buy</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Jaipur,Rajasthan</p>
+      <p><span class="glyphicon glyphicon-phone"></span>+0141-2250300</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>afrinathar29@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-8 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC23E2BksnYvUxMHoTG55yxhk1OETBPxfg&callback=myMap"></script>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  
+</footer>
+<div id="help" class="container-fluid">
+    <div class="row slideanim">
+  <h1 class="text-center">HELP</h1>
+  <h4 class="text-center">For any kind of Help, you can check the list and see the predicted data of past years which would prove beneficial for you.</h4>
+
+  <div class="container">
+  <div class="dropdown navbar-default col-sm-5">
+      <button class="btn btn-default dropdown-toggle text-center " type="button" id="menu1" data-toggle="dropdown">Select below for any kind of assistance required.
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
+        <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">Prediction in form of values </a>
+            
+        </li>
+        <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">Prediction in form of text</a></li>
+    </ul>
+      
+  </div>
+  </div>
+   <div class="row">
+       <div class="container">
+           <div class="dropdown navbar-default col-sm-5 pull-right">
+           <button class="btn btn-default dropdown-toggle " type="button" id="menu2" data-toggle="dropdown">Select the year
+               <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="menu2" >
+               <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2015</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2016</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2017</a>
+               </li>
+           </ul>
+       </div>
+       </div>
+       <div class="container ">
+           <div class="dropdown navbar-default col-sm-5">
+           <button class="btn btn-default dropdown-toggle text-center " type="button" id="menu2" data-toggle="dropdown">Select the countries
+               <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+               <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">USA</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">Australia</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+               <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">China</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">Japan</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+               <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">Switzerland</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="">Malaysia</a>
+               </li>
+               
+                <div class="container">
+           <div class="dropdown navbar-default col-sm-5 pull-right">
+           <button class="btn btn-default dropdown-toggle " type="button" id="menu2" data-toggle="dropdown">Select the year
+               <span class="caret"></span></button>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="menu2" >
+               <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2015</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2016</a>
+               </li>
+                   <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" href="yahan pe image ka link daaalnaaaaaaaaaaaaaaaaaa">2017</a>
+               </li>
+           </ul>
+       </div>
+       </div>
+                
+           
+   </div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+function validateForm()
+{
+    var x=document.forms["LogInForm"]["email"].value;
+    var y=document.forms["LogInForm"]["pwd"].value;
+    if(x=="")
+    {
+        alert("Email must be entered");
+        return false;
+    }
+    else if(y.length<6)
+    {
+        alert("Password must be 6 characters  ");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+function SubmitById()
+{
+    var x=document.getElementById("email").value;
+    var y=document.getElementById("pwd").value;
+    if(validateForm())
+    {
+        document.getElementById("FormId").submit();
+        alert("Email : " + email + " \n Form Id : " + document.getElementById("FormId").getAttribute("id") + "\n\n Form Submitted Successfully......");
+}
+}
+ 
+</script>
+
+</body>
 </html>
