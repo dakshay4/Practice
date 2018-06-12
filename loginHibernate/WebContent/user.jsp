@@ -49,7 +49,7 @@
 	<div>
 		<form method="post" action="register">
 		<label class="flable">User Name :</label> 
-		<input type="text" class="uname" name="uname"/>&nbsp;<span class="status"></span> <br/>
+		<input type="text" class="uname" name="uname"/>&nbsp;<span class="status"></span>	<br/>
 	
 		
 		Email Id :<input type="email" name="email" required /><br/>

@@ -8,5 +8,6 @@
 		<property column="PASSWORD" name="pwd" type="java.lang.String" />
 		<property column="EMAIL" name="email" type="java.lang.String" />
 		<property column="MOBILE" name="mobile" type="java.lang.String" />
+		<property column="REGISTRATION_DATE" name="registrationDate" type="java.lang.String" />
 	</class>
 </hibernate-mapping>

@@ -1,4 +1,4 @@
-package com.stpl.model;
+package com.stpl.login.model;
 
 import java.io.Serializable;
 
@@ -12,6 +12,8 @@ public class User  implements Serializable{
 	private String pwd;
 	private String email;
 	private String mobile;
+	private String registrationDate;
+	
 	public User() {
 		
 	}
@@ -63,6 +65,14 @@ public class User  implements Serializable{
 
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+
+	public String getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(String registrationDate) {
+		this.registrationDate = registrationDate;
 	}
 	
 }

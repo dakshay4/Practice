@@ -1,9 +1,9 @@
-package com.stpl.dao;
+package com.stpl.login.dao;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.stpl.model.User;
+import com.stpl.login.model.User;
 
 public interface UserDao<T,Id extends Serializable, Pwd extends Serializable> {
 	public List<User> findById(String Id, String Pwd);
